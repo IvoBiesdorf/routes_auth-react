@@ -1,0 +1,21 @@
+.menu ul {
+  display: flex;
+  list-style: none;
+  height: 40px;
+  border-bottom: 0.5px solid #CCC;
+  background-color: #EEE;
+}
+.menu li{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-right: 0.5px solid #CCC;
+  padding: 0 10px;
+}
+.manu li:hover{
+  cursor: pointer;
+  background-color: #CCC;
+}
+.menu a{
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+.user-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 0.6px solid #BBB;
+    border-radius: 8px;
+}
+.userdata{
+    width: 100%;
+    padding: 10px;
+}
+.user-name{
+    width: 100%;
+    text-align: center; 
+    border-bottom: 0.6px solid #BBB;
+    margin-bottom: 25px;
+}
+.btnImprimir, .btnVoltar{
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0.3px solid #BBB;
+}
+.btnImprimir{
+    float: right;
+}
+.btnVoltar{
+    float: left;
+}
+.btnImprimir:hover, .btnVoltar:hover{
+    cursor: pointer;
+    background-color: #CCC;
+}
+.body-print{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 10px;
+}
+@media print{
+    .user-content{
+        border: none;
+        width: 800px;
+    }
+}
