@@ -15,8 +15,12 @@ import { User } from './pages/User';
 // import './App.css';
 
 function App() {
-    const [token, setToken] = useState(true);
-
+    const [token, setToken] = useState(false);
+    const user = sessionStorage.getItem("user")
+    if(!token && user === "Usuario"){
+        setToken(true)
+    }
+    console.log(user);
     if(!token) {
         return <Login setToken={setToken} />
     }

@@ -1,6 +1,7 @@
 import './style.css'
 import React, { useEffect, useRef, useState } from 'react';
 import { Card } from '../../components/Card';
+import { Loading } from '../../components/Loading';
 
 
 export const Posts = ()=>{
@@ -24,14 +25,21 @@ export const Posts = ()=>{
     },[]);
     
     return (
-        <div className='corpo-posts'>
-            {loading? <div className='loading'><i className="fa fa-spinner fa-pulse fa-5x fa-fw" aria-hidden="true"></i></div>: photos.map((a, i)=>{
-                return( 
-                    // <Card url={a.url}> {a.title} </Card>
-                    <Card props={a} album={album[a.albumId]}/> 
-                )
-            })}
-        </div>
+        <>
+            <div className="body-post">
+                <div className='corpo-posts' key={1}>
+                    {loading ? <Loading/>: photos.map((a, i)=>{
+                        if(i<100){
+                            return( 
+                                // <Card url={a.url}> {a.title} </Card>
+                                <Card props={a} album={album[a.albumId]}/> 
+                            )
+                        }
+                    })}
+                </div>
+            </div>
+            <div className="footer-posts">	&#169; Copyright Ivo Biesdorf</div>
+        </>
     );
 }
         

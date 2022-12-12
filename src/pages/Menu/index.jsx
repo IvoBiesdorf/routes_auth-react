@@ -12,11 +12,14 @@ export const Menu = () => {
           <Link to="/users"><i className="fa fa-users" aria-hidden="true"></i> Users </Link>
         </li>
         <li>
-          <Link to="/posts">Posts</Link>
+          <Link to="/posts"><i className="fa fa-address-card-o" aria-hidden="true"></i> Posts</Link>
         </li>
-        <li>
+        <li onClick={()=>{sessionStorage.setItem("user", "");}}>
+          Sair
+        </li>
+        {/* <li>
           <Link to="/redirect">Redirect</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

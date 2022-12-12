@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Loading } from '../../components/Loading';
 import './style.css';
 
 export const Users = () => {
-    // const { state } = useLocation();
     const [result, setResult] = useState([])
-
+    const [loading, setLoading] = useState(true)
     
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users') 
         .then(response => response.json())
         .then(json => {
             setResult(json)
+            setLoading(false)
         })
     },[]);
 
@@ -24,7 +25,7 @@ export const Users = () => {
                 <div className="email">E-mail</div>
             </div>
         
-        {result && result.map((a, i)=>{
+        {loading ? <Loading/> : result.map((a, i)=>{
             return( 
                 <Link to={"/user/"+a.id}>
                     <div key={i} className="row">

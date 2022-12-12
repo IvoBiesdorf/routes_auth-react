@@ -1,6 +1,5 @@
 import './styles.css'
 
-// 
 
 export const Field = (props) => {
     const style = {
