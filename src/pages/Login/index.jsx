@@ -1,19 +1,24 @@
+import { Link } from 'react-router-dom';
 import './style.css';
 
 export const Login = () => {
     return (
-        <form>
-            <label>
-            <p>Username</p>
-            <input type="text" />
-            </label>
-            <label>
-            <p>Password</p>
-            <input type="password" />
-            </label>
-            <div>
-            <button type='button' onClick={()=>{sessionStorage.setItem("user", "Usuario");}}>Submit</button>
-            </div>
-        </form>
+        <div className='form-login'>
+            <h2>Login</h2>
+            <form >
+                <label>Username</label>
+                <input type="text" />
+                <label>Password</label>
+                <input type="password" />
+                <div>
+                    <button type='button' 
+                        onClick={()=>{
+                            sessionStorage.setItem("user", "Usuario");
+                            window.location.reload(false);
+                        }}
+                    >Login </button>
+                </div>
+            </form>
+        </div>
     )
 };
