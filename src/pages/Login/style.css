@@ -1,9 +1,11 @@
 .form-login{
-    width: 250px;
+    width: 350px;
     height: auto;
     margin: 50px auto;
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
 }
 .form-login input{
     width: 100%;
