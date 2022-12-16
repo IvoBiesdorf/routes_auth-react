@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home }     from './pages/Home/index';
 import { Users }    from './pages/Users';
 import { Menu }     from './pages/Menu';
-import { Redirect } from './pages/Redirect';
 import { NotFound } from './pages/NotFound';
 import { Posts }     from './pages/Posts';
 import { Post }     from './pages/Post';
@@ -35,7 +34,6 @@ function App() {
                     <Route path=":id" element={<Post />} />
                 </Route>
                 <Route path="/posts" element={<Posts />} />
-                <Route path="/redirect" element={<Redirect />} />
             </Route>
             <Route element={<Login/>} path="/login"/>
             <Route path="*" element={<NotFound />} />

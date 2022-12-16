@@ -17,7 +17,7 @@ export const Menu = () => {
                 <li  onClick={()=>{
                         sessionStorage.setItem("user", "");
                         window.location.reload(false);
-                    }}>Sair
+                    }}><i className="fa fa-sign-out" aria-hidden="true"></i> Sair
                 </li>
             </ul>
         </nav>
